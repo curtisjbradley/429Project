@@ -14,11 +14,13 @@ trap cleanup EXIT
 
 
 wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/KDDTrain%2B.txt
-wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/sampler.py
+wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/sample.py
 
 read -p "Enter benign percent: " pcnt
 
-file=$(python3 sampler.py pcnt)
+file=$(python3 sample.py $pcnt)
 
-echo "file"
-#wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/train.py
+echo "$file"
+wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/train.py
+
+$(python3 train.py $file)

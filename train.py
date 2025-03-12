@@ -6,9 +6,11 @@ import sys
 from datetime import datetime as time
 from os import chdir
 
+print("reading")
+print(sys.argv[1])
 data = pd.read_csv(sys.argv[1])
 
-print("Data read")
+print(data)
 
 tgan = CTGAN(epochs=200)
 discrete_columns = [

@@ -54,7 +54,7 @@ def main():
     output_filename = f"KDD-{benign_percent}b-{malicious_percent}m.txt"
     
     # Save without index and header to maintain the original format
-    new_dataset.to_csv(output_filename, index=False, header=False)
+    new_dataset.to_csv(output_filename, index=False)
 
     # Print when complete
     print(output_filename)
