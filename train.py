@@ -6,13 +6,9 @@ import sys
 from datetime import datetime as time
 from os import chdir
 
-print("reading")
-print(sys.argv[1])
 data = pd.read_csv(sys.argv[1])
 
-print(data)
-
-tgan = CTGAN(epochs=200)
+tgan = CTGAN(epochs=100, verbose=True)
 discrete_columns = [
     'protocol_type',
     'service',
