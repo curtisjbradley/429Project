@@ -22,4 +22,4 @@ file=$(python3 sample.py $pcnt)
 
 curl https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/train.py > train.py
 
-python3 train.py $file $maindir
+python3 train.py $file $maindir $pcnt

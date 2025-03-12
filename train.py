@@ -26,4 +26,4 @@ print("Finished training")
 
 
 chdir(sys.argv[2])
-tgan.save(str(time.now()) + ".pkl")
+tgan.save(sys.argv[3] +"Trained" + str(time.now()) + ".pkl")
