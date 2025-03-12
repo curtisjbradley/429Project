@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pip install ctgan sdv pandas
+pip3 install ctgan sdv pandas
 
 maindir=$(pwd)
 d=$(mktemp -d)
