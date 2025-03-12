@@ -4,6 +4,7 @@ from sdv.metadata import SingleTableMetadata
 from sdv.evaluation.single_table import evaluate_quality
 import sys
 from datetime import datetime as time
+from os import chdir
 
 data = pd.read_csv(sys.argv[1])
 
@@ -21,4 +22,6 @@ print("training")
 tgan.fit(data, discrete_columns)
 print("Finished training")
 
+
+chdir(sys.argv[2])
 tgan.save(str(time.now()) + ".pkl")
