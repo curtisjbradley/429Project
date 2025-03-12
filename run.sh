@@ -13,13 +13,13 @@ function cleanup {
 trap cleanup EXIT
 
 
-wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/KDDTrain%2B.txt
-wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/sample.py
+curl https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/KDDTrain%2B.txt > KDDTrain+.txt
+curl https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/sample.py > sample.py
 
 read -p "Enter benign percent: " pcnt
 
 file=$(python3 sample.py $pcnt)
 
-wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/train.py
+curl https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/train.py > train.py
 
 python3 train.py $file $maindir
