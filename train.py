@@ -1,7 +1,5 @@
 import pandas as pd
 from ctgan import CTGAN
-from sdv.metadata import SingleTableMetadata
-from sdv.evaluation.single_table import evaluate_quality
 import sys
 from datetime import datetime as time
 from os import chdir
