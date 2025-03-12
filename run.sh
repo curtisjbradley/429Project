@@ -20,7 +20,6 @@ read -p "Enter benign percent: " pcnt
 
 file=$(python3 sample.py $pcnt)
 
-echo "$file"
 wget https://raw.githubusercontent.com/curtisjbradley/429Project/refs/heads/main/train.py
 
-$(python3 train.py $file)
+python3 train.py $file
